@@ -1,0 +1,54 @@
+{% extends "blog/layout.html" %}
+
+{% block body %}
+
+<div id="single-post">
+
+    <div class="blog-heading">
+        <span class="single-title"> {{posts.title}}</span>
+    </div>
+    <br>
+    <div class="blog-container">
+        <div class="single-blog-box">
+
+            <div class="blog-img"> 
+                <img src="{{ posts.image.url}}" alt="Car image">
+            </div>
+            <br>
+
+            <div class="single-blog-text">
+
+                <span>Posted by: {{posts.author}} On {{posts.created_on.date}} | Categories: 
+                    {%for category in posts.category.all%}
+                        {{category.name}}
+                    {% endfor %}</span>
+                <p>{{ posts.body}}</p>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<a class="all" href="{% url 'index'%}"> All Posts</a>
+
+
+<div class="comment">
+    <h3>Comments</h3>
+
+    <form action="{% url 'single' posts.id %}" method="post">
+        {%csrf_token%}
+        {{form.as_p}}
+        <input type="submit">
+    </form>
+
+    <h3>Comments</h3>
+    {% if comments and names%}
+        {{comments}} by {{names.upper}}
+    {% else %}
+        <p>No comments</p>
+    {% endif %}
+
+</div>
+
+{% endblock %}

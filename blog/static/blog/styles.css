@@ -1,0 +1,161 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color:rgb(47, 252, 255);
+}
+
+.blog-heading{
+    font-family: impact;
+    font-size: 2.4rem;
+    padding: 20px;
+    text-align: center;
+}
+
+.blog-heading span{
+    color: rgb(7, 105, 106);
+}
+
+
+
+.blog-container{
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+
+}
+
+.blog-box{
+    width: 600px;
+    background-color: rgb(23, 150, 152);
+    border: 1px solid white;
+    margin: 20px;
+}
+
+@media(max-width:1250px) {
+    .blog-box{
+        width: 65%;
+    }  
+}
+
+@media(max-width:500px) {
+    .blog-box{
+        width: 80%;
+    }
+
+}
+
+.single-blog-box{
+    width: 100%;
+    background-color: rgb(23, 150, 152);
+    border: 1px solid white;
+    margin: 5% 10%;
+    align-content: center;
+}
+
+.blog-img{
+    width: 100%;
+    height: auto;
+}
+
+.blog-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.all{
+    margin-left: 20px;
+    color: black;
+}
+.all:hover{
+    color: red;
+}
+
+.blog-text{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-text span{
+    color: aqua;
+    font-size: o.9rem;
+}
+
+
+
+.blog-text p{
+    color: aliceblue;
+    font-size: 0.9rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 20px 0px;
+}
+
+.single-blog-text p{
+    padding: 20Px;
+    color: aliceblue;
+    font-size: 0.9rem;
+    margin: 20px 0px;
+
+}
+
+.comment{
+    margin: 20px;
+    padding: 20px
+}
+
+.comment h3{
+    color: rgb(2, 112, 112);
+}
+
+
+
+.blog-text a{
+    color: black;
+}
+.blog-text a:hover{
+    color: red;
+    transition: all ease 0.3s;
+}
+.blog-container{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+.recent-post{
+    width: 250px;
+    height: 300px;
+    background-color: rgb(3, 85, 86);
+    padding: 20px;
+    margin: 15px;
+    color: white;
+    font-size: 1rem;
+    position: fixed;
+    margin-left: 700px;
+}
+.recent-post a{
+    color: white;
+    padding: 10px;
+}
+.recent-post p{
+    text-align: center;
+}
+.recent-post a:hover{
+    color: red;
+}
+
